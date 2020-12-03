@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Quotes App</title>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="/assets/js/quotes.js"></script>
+  </head>
+  <body>
+    <h1>Quotes App</h1>
+
+    <ul id="quotes"></ul>
+
+    <h2>Add a Quote</h2>
+    <form id="addQuote" class="button-size">
+      <textarea type="text" name="quote"></textarea>
+      <textarea type="text" name="author"></textarea>
+      <button type="submit">Save Quote!</button>
+    </form>
+
+    <h2>Update a Quote</h2>
+    <form id="updateQuote" class="button-size">
+      <input type="text" id="quote_id" placeholder="id">
+      <textarea type="text" name="quote" placeholder="quote"></textarea>
+      <textarea type="text" name="author" laceholder="author"></textarea>
+      <button type="submit">Update Quote!</button>
+    </form>
+  </body>
+</html>
