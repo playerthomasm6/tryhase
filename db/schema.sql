@@ -1,11 +1,12 @@
 ### Schema
-CREATE DATABASE quotes_db;
-USE quotes_db;
+CREATE DATABASE burger_db;
+USE burger_db;
 
-CREATE TABLE quotes
+CREATE TABLE burgers
 (
 	id int NOT NULL AUTO_INCREMENT,
-	author varchar(255) NOT NULL,
-	quote TEXT NOT NULL,
+	burger_name varchar(255) NOT NULL,
+	devoured boolean DEFAULT 0,
 	PRIMARY KEY (id)
 );
+

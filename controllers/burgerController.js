@@ -3,7 +3,7 @@ var express = require("express");
 var router = express.Router();
 
 // Import the model (cat.js) to use its database functions.
-var quote = require("../models/quotes.js");
+var quote = require("../models/burger.js");
 
 router.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "public/index.html"));
@@ -16,7 +16,7 @@ router.get("/quotes", function(req, res) {
   });
 });
 
-router.post("/quotes", function(req, res) {
+router.post("/burger", function(req, res) {
   quote.create([
     "author", "quote"
   ], [
@@ -27,7 +27,7 @@ router.post("/quotes", function(req, res) {
   });
 });
 
-router.put("/quotes/:id", function(req, res) {
+router.put("/burger/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
   console.log("condition", condition);
@@ -45,7 +45,7 @@ router.put("/quotes/:id", function(req, res) {
   });
 });
 
-router.delete("/quotes/:id", function(req, res) {
+router.delete("/burger/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
   quote.delete(condition, function(result) {
