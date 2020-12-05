@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Quotes App</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
+    <title>MVC With Cats!</title>
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="/assets/js/quotes.js"></script>
+    <script src="/assets/js/burgers.js"></script>
   </head>
   <body>
-    <h1>Quotes App</h1>
+    <h1>Burger Time!!!</h1>
 
-    <ul id="quotes"></ul>
+    <h2>Burgers Read to Eat</h2>
 
-    <h2>Add a Quote</h2>
-    <form id="addQuote" class="button-size">
-      <textarea type="text" name="quote"></textarea>
-      <textarea type="text" name="author"></textarea>
-      <button type="submit">Save Quote!</button>
-    </form>
+    <ul id="noDevouredBurger">Time to Eat</ul>
 
-    <h2>Update a Quote</h2>
-    <form id="updateQuote" class="button-size">
-      <input type="text" id="quote_id" placeholder="id">
-      <textarea type="text" name="quote" placeholder="quote"></textarea>
-      <textarea type="text" name="author" laceholder="author"></textarea>
-      <button type="submit">Update Quote!</button>
+    <h2>Those Were good burgers</h2>
+
+    <ul id="devouredBurger">Those Were good</ul>
+
+    <h2>Add a Cat</h2>
+    <form class="create-form">
+      <div class="form-group">
+        <label for="ca">Burger Name:</label>
+        <input type="text" id="ca" name="name" />
+      </div>
+
+      <div class="form-group">
+        <label for="devoured">Sleepy?</label><br />
+        <input type="radio" name="devoured" value="1" checked /> Sleepy!<br />
+        <input type="radio" name="devoured" value="0" /> Awake
+      </div>
+
+      <button type="submit">Add Burger</button>
     </form>
   </body>
 </html>

@@ -10,31 +10,30 @@ router.get("/", function(req, res) {
 });
 
 // Create all our routes and set up logic within those routes where required.
-router.get("/quotes", function(req, res) {
+router.get("/burgers", function(req, res) {
     quote.all(function(data) {
-    res.json({ quotes: data });
+    res.json({ burgers: data });
   });
 });
 
-router.post("/burger", function(req, res) {
+router.post("/burgers", function(req, res) {
   quote.create([
-    "author", "quote"
+    "burger_name", "devoured"
   ], [
-    req.body.author, req.body.quote
+    req.body.burger_name, req.body.devoured
   ], function(result) {
     // Send back the ID of the new quote
     res.json({ id: result.insertId });
   });
 });
 
-router.put("/burger/:id", function(req, res) {
+router.put("/burgers/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
   console.log("condition", condition);
 
   quote.update({
-    author: req.body.author,
-    quote: req.body.quote
+    devoured: req.body.devoured,
   }, condition, function(result) {
     if (result.changedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
@@ -45,7 +44,7 @@ router.put("/burger/:id", function(req, res) {
   });
 });
 
-router.delete("/burger/:id", function(req, res) {
+router.delete("/burgers/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
   quote.delete(condition, function(result) {
