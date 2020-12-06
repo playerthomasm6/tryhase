@@ -15,7 +15,7 @@ $(document).ready(function() {
         "<li>" +
         burgers[i].id + 
         ". "+burgers[i].burger_name +
-        "<button class='change-devoured' data-id='" +
+        "<button class='btn btn-primary change-devoured' data-id='" +
         burgers[i].id +
         "' data-newdevoured='" +
         !burgers[i].devoured +
@@ -23,7 +23,7 @@ $(document).ready(function() {
         
 
 
-       if (burgers[i].devoured) {
+       if (!burgers[i].devoured) {
          new_elem += "Eat the burger";
        } else {
          new_elem += "Make Another One!";
@@ -32,11 +32,11 @@ $(document).ready(function() {
       new_elem += "</button>";
 
       new_elem +=
-        "<button class='delete-burger' data-id='" +
+        "<button class='btn btn-danger delete-burger' data-id='" +
         burgers[i].id +
         "'>DELETE!</button></li>";
 
-      if (!burgers[i].devoured) {
+      if (burgers[i].devoured) {
         devouredElem.append(new_elem);
       } else {
         console.log(new_elem);
@@ -75,9 +75,6 @@ $(document).ready(function() {
       burger_name: $("#ca")
         .val()
         .trim(),
-      devoured: $("[name=devoured]:checked")
-        .val()
-        .trim()
     };
 
     // Send the POST request.
