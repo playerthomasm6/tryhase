@@ -1,6 +1,6 @@
 # Eat-Da-Burger! (tryhase)
 
- ![CheeseBurgerLogo](tryhase\public\assets\images\screenShot.JPG)
+ ![CheeseBurgerLogo](./public/assets/images/screenShot.JPG)
  
 # Table of Contents
 * [Description](Description)
